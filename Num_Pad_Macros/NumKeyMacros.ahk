@@ -34,68 +34,7 @@ return
 
 ;***********Tag Github Issue with CXP, Triaged, and Product-Question*******************
 Numpad2::
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {SPACE}
-Sleep, 1000
-Send, cxp
-Sleep, 150
-Send, {ENTER}
-Sleep, 150
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, triaged
-Sleep, 150
-Send, {ENTER}
-Sleep, 150
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
+gosub label_cxp_and_triage
 Send, product-question
 Sleep, 150
 Send, {ENTER}
@@ -119,68 +58,7 @@ return
 
 ;***********Tag Github Issue with CXP, Triaged, and Product-Feedback*******************
 Numpad5::
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {SPACE}
-Sleep, 1000
-Send, cxp
-Sleep, 150
-Send, {ENTER}
-Sleep, 150
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, triaged
-Sleep, 150
-Send, {ENTER}
-Sleep, 150
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
+gosub label_cxp_and_triage
 Send, product-feedback
 Sleep, 150
 Send, {ENTER}
@@ -203,68 +81,7 @@ return
 
 ;***********Tag Github Issue with CXP, Triaged, and doc-enhancement*******************
 Numpad8::
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {SPACE}
-Sleep, 1000
-Send, cxp
-Sleep, 150
-Send, {ENTER}
-Sleep, 150
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, triaged
-Sleep, 150
-Send, {ENTER}
-Sleep, 150
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
+gosub label_cxp_and_triage
 Send, doc-enhancement
 Sleep, 150
 Send, {ENTER}
@@ -312,6 +129,11 @@ Store:=ClipboardAll  ;Store full version of Clipboard
         Return
       }
 return
+
+Store_Clipboard:
+Store:=ClipboardAll  ;Store full version of Clipboard
+clipboard = ; Empty the clipboard
+return
  
 ;**********************restore clipboard*********************************
 Paste_and_Restore_Stored_Clipboard:  ;put back original content
@@ -319,7 +141,10 @@ SendEvent , ^v
 Clipboard:=Store
 return
  
- 
+Restore_Stored_Clipboard:  ;put back original content
+Clipboard:=Store
+return
+
 ;***********https://autohotkey.com/board/topic/17367-url-encoding-and-decoding-of-special-characters/******************* 
 uriDecode(str) {
     Loop
@@ -335,3 +160,73 @@ UriEncode(Uri, RE="[0-9A-Za-z]"){
     Res.=(Chr:=Chr(Code))~=RE?Chr:Format("%{:02X}",Code)
     Return,Res  
 }
+
+;************************************* Add CXP and Triaged labels *************************************
+label_cxp_and_triage:
+gosub Store_Clipboard ;backup original clipboard
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {TAB}
+Sleep, 20
+Send, {SPACE}
+Sleep, 1000
+clipboard:=cxp
+Send, {CTRL DOWN}v{CTRL UP}
+Sleep, 500
+Send, {ENTER}
+Sleep, 150
+Send, {BACKSPACE}
+Send, {BACKSPACE}
+Send, {BACKSPACE}
+clipboard:=triaged
+Send, {CTRL DOWN}v{CTRL UP}
+Sleep,500
+Send, {ENTER}
+Sleep, 150
+Send, {BACKSPACE}
+Send, {BACKSPACE}
+Send, {BACKSPACE}
+Send, {BACKSPACE}
+Send, {BACKSPACE}
+Send, {BACKSPACE}
+Send, {BACKSPACE}
+gosub Restore_Stored_Clipboard ;restore clipboard
+return
