@@ -27,7 +27,7 @@ m := RegExReplace(m,"\x20{2,}","")
 m := RegExReplace(m,"\t","")
 Clipboard := m
 WinGetPos,,,Xmax,Ymax,A ; get active window size
-Xcenter := Xmax/4        ; Calculate quarter of window, so we move to the quarter left of the screen to click. nothing there on git
+Xcenter := Xmax/8        ; Calculate quarter of window, so we move to the quarter left of the screen to click. nothing there on git
 Ycenter := Ymax/2
 ControlClick, x%Xcenter% y%Ycenter%, A
 return
@@ -35,8 +35,11 @@ return
 ;***********Tag Github Issue with CXP, Triaged, and Product-Question*******************
 Numpad2::
 gosub label_cxp_and_triage
-Send, product-question
-Sleep, 150
+gosub Store_Clipboard ;backup original clipboard
+clipboard:="product-question"
+Send, {CTRL DOWN}v{CTRL UP}
+gosub Restore_Stored_Clipboard ;backup original clipboard
+Sleep, 500
 Send, {ENTER}
 Sleep, 150
 return
@@ -47,8 +50,11 @@ Send,@
 Sleep, 150
 Send,{CTRL DOWN}v{CTRL UP}
 Sleep, 150
+gosub Store_Clipboard ;backup original clipboard
 clipboard:= "Thanks for your feedback! We will investigate and update as appropriate."
 Send,{CTRL DOWN}v{CTRL UP}
+Sleep, 100
+gosub Restore_Stored_Clipboard ;backup original clipboard
 return
 
 ;***********Run Notepad++******************* 
@@ -59,8 +65,13 @@ return
 ;***********Tag Github Issue with CXP, Triaged, and Product-Feedback*******************
 Numpad5::
 gosub label_cxp_and_triage
-Send, product-feedback
-Sleep, 150
+
+gosub Store_Clipboard ;backup original clipboard
+clipboard:="product-feedback"
+Send, {CTRL DOWN}v{CTRL UP}
+gosub Restore_Stored_Clipboard ;backup original clipboard
+
+Sleep, 500
 Send, {ENTER}
 Sleep, 150
 return
@@ -82,19 +93,38 @@ return
 ;***********Tag Github Issue with CXP, Triaged, and doc-enhancement*******************
 Numpad8::
 gosub label_cxp_and_triage
-Send, doc-enhancement
-Sleep, 150
+gosub Store_Clipboard ;backup original clipboard
+clipboard:="doc-enhancement"
+Send, {CTRL DOWN}v{CTRL UP}
+gosub Restore_Stored_Clipboard ;backup original clipboard
+Sleep, 500
 Send, {ENTER}
 Sleep, 150
 return
 
 ;***********Templated Response for MSDN******************* 
 Numpad9::
-Send, I'm following up on this, please remember to mark one of the responses as answer if your question has been answered. If not please let us know if there are anymore questions. Thanks!
+gosub Store_Clipboard ;backup original clipboard
+clipboard:="I'm following up on this, please remember to mark one of the responses as answer if your question has been answered. If not please let us know if there are anymore questions. Thanks!"
+Send, {CTRL DOWN}v{CTRL UP}
+gosub Restore_Stored_Clipboard ;backup original clipboard
 return
 
 ;Numpad+ available
 ;Numpad_clear available
+
+;***********Tag Github Issue with CXP, Triaged, and doc-bug*******************
+NumpadDiv::
+gosub label_cxp_and_triage
+gosub Store_Clipboard ;backup original clipboard
+clipboard:="doc-bug"
+Send, {CTRL DOWN}v{CTRL UP}
+gosub Restore_Stored_Clipboard ;backup original clipboard
+Sleep, 500
+Send, {ENTER}
+Sleep, 150
+return
+
 ;Numpad_backspace available
 ;Numpad_calc available
 ;numpad_enter available
@@ -208,7 +238,7 @@ Send, {TAB}
 Sleep, 20
 Send, {SPACE}
 Sleep, 1000
-clipboard:=cxp
+clipboard:="cxp"
 Send, {CTRL DOWN}v{CTRL UP}
 Sleep, 500
 Send, {ENTER}
@@ -216,7 +246,7 @@ Sleep, 150
 Send, {BACKSPACE}
 Send, {BACKSPACE}
 Send, {BACKSPACE}
-clipboard:=triaged
+clipboard:="triaged"
 Send, {CTRL DOWN}v{CTRL UP}
 Sleep,500
 Send, {ENTER}
