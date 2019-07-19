@@ -1,2 +1,4 @@
 # AutoHotkeyScripts
- AutoHotkeyScripts I utilize
+ This repo has some AutoHotKey scripts I utilize.
+ 
+ 
