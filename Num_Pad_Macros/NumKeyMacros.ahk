@@ -20,7 +20,7 @@ Sleep, 100
 Send, {CTRL DOWN}c{CTRL UP}
 Sleep, 100
 var:=Clipboard
-RegExMatch(var,"Open(.*)opened",m)	; saves only the text from 'Text name' to the end of the 'Port' line
+RegExMatch(var,"Open(.*)opened",m)	; saves only the Open _____ opened text from the webpage
 m := RegExReplace(m,"Open","")
 m := RegExReplace(m,"opened","")
 m := RegExReplace(m,"\x20{2,}","")
@@ -36,9 +36,17 @@ return
 Numpad2::
 gosub label_cxp_and_triage
 Send, product-question
+Sleep, 500
+Send, {TAB}
 Sleep, 150
-Send, {ENTER}
+Send, {SPACE}
 Sleep, 150
+Send, {SHIFT DOWN}{TAB}{SHIFT UP}
+Sleep, 150
+WinGetPos,,,Xmax,Ymax,A ; get active window size
+Xcenter := Xmax/4        ; Calculate quarter of window, so we move to the quarter left of the screen to click. nothing there on git
+Ycenter := Ymax/2
+ControlClick, x%Xcenter% y%Ycenter%, A
 return
 
 ;***********Load Git Template Reply With Author Name******************* 
@@ -60,10 +68,18 @@ return
 Numpad5::
 gosub label_cxp_and_triage
 Send, product-feedback
+Sleep, 500
+Send, {TAB}
 Sleep, 150
-Send, {ENTER}
+Send, {SPACE}
 Sleep, 150
-return
+Send, {SHIFT DOWN}{TAB}{SHIFT UP}
+Sleep, 150
+WinGetPos,,,Xmax,Ymax,A ; get active window size
+Xcenter := Xmax/4        ; Calculate quarter of window, so we move to the quarter left of the screen to click. nothing there on git
+Ycenter := Ymax/2
+ControlClick, x%Xcenter% y%Ycenter%, A
+return   
 
 ;***********Decode URL & Wrap on Parameters******************* 
 Numpad6:: ;Decode URL and Wrap on parameters
@@ -75,17 +91,26 @@ Gosub Paste_and_Restore_Stored_Clipboard
 return
 
 
-
-;Numpad7 available
-
+;***********Templated Response for GitHub******************* 
+Numpad7::
+Send, Please let us know if there are anymore questions within the scope of this git issue. If not, I will be closing out this git issue by end of day today. Please reopen this git issue if you have anymore concerns. Thanks! 
+return
 
 ;***********Tag Github Issue with CXP, Triaged, and doc-enhancement*******************
 Numpad8::
 gosub label_cxp_and_triage
 Send, doc-enhancement
+Sleep, 500
+Send, {TAB}
 Sleep, 150
-Send, {ENTER}
+Send, {SPACE}
 Sleep, 150
+Send, {SHIFT DOWN}{TAB}{SHIFT UP}
+Sleep, 150
+WinGetPos,,,Xmax,Ymax,A ; get active window size
+Xcenter := Xmax/4        ; Calculate quarter of window, so we move to the quarter left of the screen to click. nothing there on git
+Ycenter := Ymax/2
+ControlClick, x%Xcenter% y%Ycenter%, A
 return
 
 ;***********Templated Response for MSDN******************* 
@@ -97,8 +122,10 @@ return
 ;Numpad_clear available
 ;Numpad_backspace available
 ;Numpad_calc available
-;numpad_enter available
+ 
 
+
+;Using numpadenter as a tester
 
 
 
@@ -115,6 +142,19 @@ gosub Store_Clipboard_Copy_Selected_Text
 Clipboard:=URiDecode(clipboard) ;Decode URL
 Gosub Paste_and_Restore_Stored_Clipboard ;restore clipboard
 return
+
+
+
+
+
+
+
+;************************************************* Below are functions for button press macros *********************************************
+
+
+
+
+
 
 
 ;*******Store Clipboard- save for restoring, and copy selected text to clipboard****************
@@ -163,69 +203,116 @@ UriEncode(Uri, RE="[0-9A-Za-z]"){
 
 ;************************************* Add CXP and Triaged labels *************************************
 label_cxp_and_triage:
-gosub Store_Clipboard ;backup original clipboard
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {TAB}
-Sleep, 20
-Send, {SPACE}
-Sleep, 1000
-Sleep, 1000
-Send, cxp
-Sleep, 500
-Send, {ENTER}
-Sleep, 150
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, triaged
-Sleep,500
-Send, {ENTER}
-Sleep, 150
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
+; check if there's an assignee first. 
+Send, {CTRL DOWN}a{CTRL UP}
+Sleep, 100
+Send, {CTRL DOWN}c{CTRL UP}
+Sleep, 100
+var:=Clipboard
+RegExMatch(var,"Assignees No one",m)	; Finds regexmatch
+if (m=""){
+	Msgbox "There is already an assignee, this script only works with no assignee"
+	Exit ; terminate the program
+}else{
+	Send, {CTRL DOWN}r{CTRL UP}
+	Sleep, 2000
+	gosub Store_Clipboard ;backup original clipboard
+	Send, {TAB}
+	Sleep, 20 cxp
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {TAB}
+	Sleep, 20
+	Send, {SPACE}
+	Sleep, 1000
+
+
+
+
+	; begin labeling
+	Send, cxp
+	Sleep, 500
+	Send, {TAB}
+	Sleep, 150
+	Send, {SPACE}
+	Sleep, 150
+	Send, {SHIFT DOWN}{TAB}{SHIFT UP}
+	Send, {BACKSPACE}
+	Send, {BACKSPACE}
+	Send, {BACKSPACE}
+
+
+	Send, triaged
+	Sleep, 500
+	Send, {TAB}
+	Sleep, 150
+	Send, {SPACE}
+	Sleep, 150
+	Send, {SHIFT DOWN}{TAB}{SHIFT UP}
+	Send, {BACKSPACE}
+	Send, {BACKSPACE}
+	Send, {BACKSPACE}
+	Send, {BACKSPACE}
+	Send, {BACKSPACE}
+	Send, {BACKSPACE}
+	Send, {BACKSPACE}
+
+}
 gosub Restore_Stored_Clipboard ;restore clipboard
 return
