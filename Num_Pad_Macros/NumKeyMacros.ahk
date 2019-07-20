@@ -122,6 +122,24 @@ return
 ;Numpad_clear available
 ;Numpad_backspace available
 ;Numpad_calc available
+
+NumpadDiv::
+gosub label_cxp_and_triage
+Send, doc-issue
+Sleep, 500
+Send, {TAB}
+Sleep, 150
+Send, {SPACE}
+Sleep, 150
+Send, {SHIFT DOWN}{TAB}{SHIFT UP}
+Sleep, 150
+WinGetPos,,,Xmax,Ymax,A ; get active window size
+Xcenter := Xmax/4        ; Calculate quarter of window, so we move to the quarter left of the screen to click. nothing there on git
+Ycenter := Ymax/2
+ControlClick, x%Xcenter% y%Ycenter%, A
+return
+
+
  
 
 
@@ -204,10 +222,11 @@ UriEncode(Uri, RE="[0-9A-Za-z]"){
 ;************************************* Add CXP and Triaged labels *************************************
 label_cxp_and_triage:
 ; check if there's an assignee first. 
+gosub Store_Clipboard ;backup original clipboard
 Send, {CTRL DOWN}a{CTRL UP}
-Sleep, 100
+Sleep, 20
 Send, {CTRL DOWN}c{CTRL UP}
-Sleep, 100
+Sleep, 70
 var:=Clipboard
 RegExMatch(var,"Assignees No one",m)	; Finds regexmatch
 if (m=""){
@@ -216,7 +235,6 @@ if (m=""){
 }else{
 	Send, {CTRL DOWN}r{CTRL UP}
 	Sleep, 2000
-	gosub Store_Clipboard ;backup original clipboard
 	Send, {TAB}
 	Sleep, 20 cxp
 	Send, {TAB}
