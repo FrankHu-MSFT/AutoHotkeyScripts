@@ -230,7 +230,7 @@ Sleep, 70
 var:=Clipboard
 RegExMatch(var,"Assignees No one",m)	; Finds regexmatch
 if (m=""){
-	Msgbox "There is already an assignee or this was run on a page that wasn't a git issue, this script only works when the issue doesn't have an assignee and it has to be on a git issue page. The behavior is unpredictable on pages that aren't git issues. Please be careful next time."
+	Msgbox There is already an assignee or this was run on a page that wasn't a git issue.                  				         									                	The behavior is unpredictable on pages that aren't git issues. 										Please be careful next time.
 	Exit ; terminate the program
 }else{
 	Send, {CTRL DOWN}r{CTRL UP}
