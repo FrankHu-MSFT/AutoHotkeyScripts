@@ -6,7 +6,7 @@ I've begun using this and figured to share it out to the team to see if anyone's
 To install ahk - https://www.autohotkey.com/download/
 
 Autohotkey is a way to press a bunch of keys, when pressing one key. 
-This script gives your number keypad have different functions. 
+This script converts the number keypad into a set of macros. 
 
 1. Get Github Author Name
 1. label github question as product-question
