@@ -125,7 +125,7 @@ return
 
 NumpadDiv::
 gosub label_cxp_and_triage
-Send, doc-issue
+Send, doc-bug
 Sleep, 500
 Send, {TAB}
 Sleep, 150
@@ -162,6 +162,14 @@ Gosub Paste_and_Restore_Stored_Clipboard ;restore clipboard
 return
 
 
+
+NumpadAdd::
+Send, {CTRL DOWN}{tab}{CTRL UP}
+return
+
+NumpadEnter::
+Send, {CTRL DOWN}{SHIFT DOWN}{tab}{CTRL UP}{SHIFT UP}
+return
 
 
 
@@ -223,114 +231,33 @@ UriEncode(Uri, RE="[0-9A-Za-z]"){
 label_cxp_and_triage:
 ; check if there's an assignee first. 
 gosub Store_Clipboard ;backup original clipboard
-Send, {CTRL DOWN}a{CTRL UP}
-Sleep, 20
-Send, {CTRL DOWN}c{CTRL UP}
-Sleep, 70
-var:=Clipboard
-RegExMatch(var,"Assignees No one",m)	; Finds regexmatch
-if (m=""){
-	Msgbox There is already an assignee or this was run on a page that wasn't a git issue.                  				         									                	The behavior is unpredictable on pages that aren't git issues. 										Please be careful next time.
-	Exit ; terminate the program
-}else{
-	Send, {CTRL DOWN}r{CTRL UP}
-	Sleep, 2000
-	Send, {TAB}
-	Sleep, 20 cxp
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {TAB}
-	Sleep, 20
-	Send, {SPACE}
-	Sleep, 1000
+; begin labeling
+Send, cxp
+Sleep, 500
+Send, {TAB}
+Sleep, 150	
+Send, {SPACE}
+Sleep, 150
+Send, {SHIFT DOWN}{TAB}{SHIFT UP}
+Send, {BACKSPACE}
+Send, {BACKSPACE}
+Send, {BACKSPACE}
 
 
+Send, triaged
+Sleep, 500
+Send, {TAB}
+Sleep, 150
+Send, {SPACE}
+Sleep, 150
+Send, {SHIFT DOWN}{TAB}{SHIFT UP}
+Send, {BACKSPACE}
+Send, {BACKSPACE}
+Send, {BACKSPACE}
+Send, {BACKSPACE}
+Send, {BACKSPACE}
+Send, {BACKSPACE}
+Send, {BACKSPACE}
 
-
-	; begin labeling
-	Send, cxp
-	Sleep, 500
-	Send, {TAB}
-	Sleep, 150
-	Send, {SPACE}
-	Sleep, 150
-	Send, {SHIFT DOWN}{TAB}{SHIFT UP}
-	Send, {BACKSPACE}
-	Send, {BACKSPACE}
-	Send, {BACKSPACE}
-
-
-	Send, triaged
-	Sleep, 500
-	Send, {TAB}
-	Sleep, 150
-	Send, {SPACE}
-	Sleep, 150
-	Send, {SHIFT DOWN}{TAB}{SHIFT UP}
-	Send, {BACKSPACE}
-	Send, {BACKSPACE}
-	Send, {BACKSPACE}
-	Send, {BACKSPACE}
-	Send, {BACKSPACE}
-	Send, {BACKSPACE}
-	Send, {BACKSPACE}
-
-}
 gosub Restore_Stored_Clipboard ;restore clipboard
 return
