@@ -19,7 +19,8 @@ This script converts the number keypad into a set of macros.
 1. msdn followup template
 1. clear - Does nothing
 1. Divide - (the key / ) labels git issue as a doc-bug
-1. URL Encodes text
-1. decodes url 
+1. Mult/* - URL Encodes text
+1. Minus/- decodes url 
+1. NumLock  - Emergency Exit Button 
 
 Please reach out to FRHU, if you're interested in a short video of me using it. 
