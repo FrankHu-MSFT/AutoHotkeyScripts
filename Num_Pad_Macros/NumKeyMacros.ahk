@@ -4,6 +4,20 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
+; ----------- To get key information, remove the semicolons before lines 8,9, and 10. 
+; #InstallKeybdHook
+; #InstallMouseHook
+; KeyHistory
+
+
+
+; Numpad_clear : maps to Escape key,
+; Numpad_backspace :  backspace - maps to actual backspace...
+; Numpad_calc : Calc is - Launch_App2,
+; NumpadDot : is the dot. 
+
+; Launch_App2::
+; Send, test
 
 ;***********Select All******************* 
 Numpad0::^a
@@ -162,14 +176,8 @@ NumpadEnter::
 Send, {CTRL DOWN}{SHIFT DOWN}{tab}{CTRL UP}{SHIFT UP}
 return
 
-
-
-
-
-;Numpad_clear available
-;Numpad_backspace available
-;Numpad_calc available
-;numpad_numlock available
+;***********Emergency Stop******************* 
+NumLock::ExitApp
 
 
 
