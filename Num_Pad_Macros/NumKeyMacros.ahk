@@ -118,11 +118,7 @@ Numpad9::
 Send, I'm following up on this, please remember to mark one of the responses as answer if your question has been answered. If not please let us know if there are anymore questions. Thanks!
 return
 
-;Numpad+ available
-;Numpad_clear available
-;Numpad_backspace available
-;Numpad_calc available
-
+;***********Tag Github Issue with CXP, Triaged, and doc-bug*******************
 NumpadDiv::
 gosub label_cxp_and_triage
 Send, doc-bug
@@ -138,13 +134,6 @@ Xcenter := Xmax/4        ; Calculate quarter of window, so we move to the quarte
 Ycenter := Ymax/2
 ControlClick, x%Xcenter% y%Ycenter%, A
 return
-
-
- 
-
-
-
-
 
 
 ;***********Encode URL******************* 
@@ -174,6 +163,13 @@ Send, {CTRL DOWN}{SHIFT DOWN}{tab}{CTRL UP}{SHIFT UP}
 return
 
 
+
+
+
+;Numpad_clear available
+;Numpad_backspace available
+;Numpad_calc available
+;numpad_numlock available
 
 
 
