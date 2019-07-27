@@ -143,7 +143,7 @@ return
  
 
 
-;Using numpadenter as a tester
+
 
 
 
@@ -162,11 +162,13 @@ Gosub Paste_and_Restore_Stored_Clipboard ;restore clipboard
 return
 
 
-
+;***********forwards tab******************* 
 NumpadAdd::
 Send, {CTRL DOWN}{tab}{CTRL UP}
 return
 
+; Usually I use numpadenter as a tester, when I'm not using it as tester, i use it for shift + tab to go backwards through tabs
+;***********backwards tab******************* 
 NumpadEnter::
 Send, {CTRL DOWN}{SHIFT DOWN}{tab}{CTRL UP}{SHIFT UP}
 return
