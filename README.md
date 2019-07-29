@@ -26,4 +26,4 @@ This script converts the number keypad into a set of macros.
 Please reach out to FRHU, if you're interested in a short video of me using it. 
 
 # Support
-If there are any issues in regards to this sample, please file a GitHub issue. This sample is not supported by Azure Support or Microsoft nor is this plugin associated with Microsoft.
+If there are any issues in regards to this sample, please file a GitHub issue. This sample is not supported by Azure Support or Microsoft nor is this AHK associated with Microsoft.
