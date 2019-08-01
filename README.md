@@ -56,6 +56,12 @@ This script converts the number keypad into a set of macros.
 ![](Gifs/Divide_Label_Doc_Bug.gif)
 
 
+**+ - Alt Tabs**
+![](Gifs/+_Alt_Tab.gif)
+
+**Enter - Shift Alt Tabs**
+![](Gifs/Enter_Shift_Alt_Tab.gif)
+
 **Mult - URL Encodes text**
 
 **Minus/-NumpadSub decodes url**
