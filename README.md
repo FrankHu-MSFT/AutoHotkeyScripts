@@ -9,7 +9,7 @@ Autohotkey is a way to press a bunch of keys, when pressing one key. 
 This script converts the number keypad into a set of macros. 
 
 1. Get Github Author Name
-![](https://github.com/FrankHu-MSFT/AutoHotkeyScripts/tree/master/Gifs/1_Get_Op_Name.gif)
+![](1_Get_Op_Name.gif)
 1. label github question as product-question
 1. paste github template with author name. (You have to get the author name first by pressing 1) 
 1. opens notepad++
