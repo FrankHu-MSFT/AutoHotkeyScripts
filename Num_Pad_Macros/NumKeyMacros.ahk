@@ -124,7 +124,7 @@ Send,@
 Sleep, 150
 Send,{CTRL DOWN}v{CTRL UP}
 Sleep, 150
-Send, As there hasn't been a response in a while, I will be closing out this git issue now, please reopen this git issue if you have anymore concerns. Thanks - Frank Hu
+Send, As there hasn't been a response in a while, I will be closing out this git issue now, please reopen this git issue if you have anymore concerns. Thanks
 return
 
 ;***********Templated Response for Following up on GitHub******************* 
@@ -133,7 +133,7 @@ Send,@
 Sleep, 150
 Send,{CTRL DOWN}v{CTRL UP}
 Sleep, 150
-Send, I'm following up on this issue, can you please respond in regards to the previous replies on this thread? Thanks, - Frank Hu
+Send, I'm following up on this issue, can you please respond in regards to the previous replies on this thread? Thanks
 return
 
 ;***********Tag Github Issue with CXP, Triaged, and doc-enhancement*******************
