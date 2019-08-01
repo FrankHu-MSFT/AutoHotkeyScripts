@@ -56,8 +56,10 @@ This script converts the number keypad into a set of macros.
 ![](Gifs/Divide_Label_Doc_Bug.gif)
 
 
-**Mult/* - URL Encodes text**
+**Mult - URL Encodes text**
+
 **Minus/-NumpadSub decodes url**
+
 **NumLock  - Emergency Exit Button**
 
 Please reach out to FRHU, if you're interested in a short video of me using it. 
