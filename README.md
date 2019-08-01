@@ -32,7 +32,7 @@ This script converts the number keypad into a set of macros.
 ![](Gifs/6_Decode_URL_Wrap_Params.gif)
 
 
-**7. Github follow up response template. Has three variations, hold 0 or 7 for different variation.**
+**7. Github follow up response template. Has three variations, hold 0 or 7 for different variation. (You have to get the author name first by pressing 1)** 
 ![](Gifs/7_GitHub_Follow_Up.gif)
 ![](Gifs/7+0_GitHub_Follow_Up.gif)
 ![](Gifs/7+Dot_GitHub_Follow_Up.gif)
