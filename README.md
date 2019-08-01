@@ -5,6 +5,10 @@ This is a small AutoHotKey Script to get git author name, label github questions
 I've begun using this and figured to share it out to the team to see if anyone's interested in using it. 
 To install ahk - https://www.autohotkey.com/download/
 
+A short tutorial on how to use authotkey : https://www.autohotkey.com/docs/Tutorial.htm
+
+Essentially all you need to do to get this AHK to run is to install Autohotkey. And then double click on the numkeymacros.ahk file. Then you should be good to go.
+
 Autohotkey is a way to press a bunch of keys, when pressing one key. 
 This script converts the number keypad into a set of macros. 
 
@@ -32,7 +36,7 @@ This script converts the number keypad into a set of macros.
 ![](Gifs/6_Decode_URL_Wrap_Params.gif)
 
 
-**7. Github follow up response template. Has three variations, hold 0 or 7 for different variation.**
+**7. Github follow up response template. Has three variations, hold 0 or 7 for different variation. (You have to get the author name first by pressing 1)** 
 ![](Gifs/7_GitHub_Follow_Up.gif)
 ![](Gifs/7+0_GitHub_Follow_Up.gif)
 ![](Gifs/7+Dot_GitHub_Follow_Up.gif)
