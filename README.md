@@ -16,7 +16,7 @@ This script converts the number keypad into a set of macros.
 ![](Gifs/2_Label_Product_Question.gif)
 
 
-**3. paste github template with author name. (You have to get the author name first by pressing 1) **
+**3. paste github template with author name. (You have to get the author name first by pressing 1)**
 ![](Gifs/3_Initial_Response.gif)
 
 
@@ -28,7 +28,7 @@ This script converts the number keypad into a set of macros.
 ![](Gifs/5_Label_Feedback.gif)
 
 
-**6. decodes URL and wraps on parameters (for getting jwt tokens) **
+**6. decodes URL and wraps on parameters (for getting jwt tokens)**
 ![](Gifs/6_Decode_URL_Wrap_Params.gif)
 
 
@@ -56,9 +56,9 @@ This script converts the number keypad into a set of macros.
 ![](Gifs/Divide_Label_Doc_Bug.gif)
 
 
-** Mult/* - URL Encodes text**
-** Minus/-NumpadSub decodes url **
-** NumLock  - Emergency Exit Button **
+**Mult/* - URL Encodes text**
+**Minus/-NumpadSub decodes url**
+**NumLock  - Emergency Exit Button**
 
 Please reach out to FRHU, if you're interested in a short video of me using it. 
 
