@@ -10,7 +10,9 @@ I've begun using this and figured to share it out to the team to see if anyone's
 # Installation
 *From the guide*
 
-Before learning to use AutoHotkey (AHK), you will need to download it. After downloading it, you may possibly need to install it. But that depends on the version you want. For this guide we will use the Installer since it is easiest to set up.
+Before learning to use AutoHotkey (AHK), you will need to download it. 
+
+After downloading it, you may possibly need to install it. But that depends on the version you want. For this guide we will use the Installer since it is easiest to set up.
 
 Click Download: https://autohotkey.com/download/ahk-install.exe
 
