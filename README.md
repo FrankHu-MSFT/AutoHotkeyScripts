@@ -25,6 +25,17 @@ You can stop a script by going to your task bar and right clicking and stopping 
 
 ![](Gifs/Exit_Script.gif)
 
+# Setting Up Scripts to Run on Startup
+
+All executables you want to run on startup can be found in the folder path : 
+
+`C:\Users\<replace-your-username>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
+
+So if you would like for the an autohotkey to run on startup, create a shortcut of an autohotkey and put it in the startup folder. 
+See the gif below.
+
+![](Gifs/Run_On_Startup.gif)
+
 # Functionality
 
 **1. Get Github Author Name**
