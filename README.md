@@ -2,15 +2,30 @@
 
 This is a small AutoHotKey Script to get git author name, label github questions, and post templates for Git IR, MSDN Follow up, and git follow up, and some other things.
 
+Autohotkey is a way to press a bunch of keys, when pressing one key. 
+This script converts the number keypad into a set of macros. 
+
 I've begun using this and figured to share it out to the team to see if anyone's interested in using it. 
+
+# Installation
+
 To install ahk - https://www.autohotkey.com/download/
 
 A short tutorial on how to use authotkey : https://www.autohotkey.com/docs/Tutorial.htm
 
-Essentially all you need to do to get this AHK to run is to install Autohotkey. And then double click on the numkeymacros.ahk file. Then you should be good to go.
+Basically install AutoHotKey the program first, and then you will be able to double click the .ahk files to run them. 
 
-Autohotkey is a way to press a bunch of keys, when pressing one key. 
-This script converts the number keypad into a set of macros. 
+![](Gifs/Run_AHK_Script.gif)
+
+If there are any questions about installing AutoHotKey, and running the scripts please let me know. 
+
+# Stopping Scripts
+
+You can stop a script by going to your task bar and right clicking and stopping it. 
+
+![](Gifs/Exit_Script.gif)
+
+# Functionality
 
 **1. Get Github Author Name**
 ![](Gifs/1_Get_OP_Name.gif)
