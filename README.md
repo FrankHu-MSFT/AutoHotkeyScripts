@@ -45,7 +45,7 @@ All executables you want to run on startup can be found in the folder path :
 
 `C:\Users\<replace-your-username>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
 
-So if you would like for the an autohotkey to run on startup, create a shortcut of an autohotkey and put it in the startup folder. 
+So if you would like for all autohotkey scripts in this git repo to run on startup, create a shortcut of an autohotkey and put it in the startup folder. 
 See the gif below.
 
 ![](Gifs/Run_On_Startup.gif)
