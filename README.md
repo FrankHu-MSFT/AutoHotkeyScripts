@@ -8,12 +8,6 @@ This script converts the number keypad into a set of macros.
 I've begun using this and figured to share it out to the team to see if anyone's interested in using it. 
 
 # Installation
-
-*Official Docs*
-
-To install ahk - https://www.autohotkey.com/download/
-A short tutorial on how to use authotkey : https://www.autohotkey.com/docs/Tutorial.htm
-
 *From the guide*
 
 Before learning to use AutoHotkey (AHK), you will need to download it. After downloading it, you may possibly need to install it. But that depends on the version you want. For this guide we will use the Installer since it is easiest to set up.
@@ -29,6 +23,13 @@ Once you're done, you can double click a AHK Script to run the script.
 ![](Gifs/Run_AHK_Script.gif)
 
 If there are any questions about installing AutoHotKey, and running the scripts please let me know. 
+
+
+*Official Docs*
+
+To install ahk - https://www.autohotkey.com/download/
+
+A short tutorial on how to use authotkey : https://www.autohotkey.com/docs/Tutorial.htm
 
 # Stopping Scripts
 
