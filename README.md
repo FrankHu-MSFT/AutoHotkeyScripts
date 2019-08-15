@@ -10,10 +10,12 @@ I've begun using this and figured to share it out to the team to see if anyone's
 # Installation
 
 *Official Docs*
+
 To install ahk - https://www.autohotkey.com/download/
 A short tutorial on how to use authotkey : https://www.autohotkey.com/docs/Tutorial.htm
 
 *From the guide*
+
 Before learning to use AutoHotkey (AHK), you will need to download it. After downloading it, you may possibly need to install it. But that depends on the version you want. For this guide we will use the Installer since it is easiest to set up.
 
 Go to the AutoHotkey Homepage: https://autohotkey.com/
