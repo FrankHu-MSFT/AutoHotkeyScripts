@@ -18,8 +18,6 @@ A short tutorial on how to use authotkey : https://www.autohotkey.com/docs/Tutor
 
 Before learning to use AutoHotkey (AHK), you will need to download it. After downloading it, you may possibly need to install it. But that depends on the version you want. For this guide we will use the Installer since it is easiest to set up.
 
-Go to the AutoHotkey Homepage: https://autohotkey.com/
-
 Click Download: https://autohotkey.com/download/ahk-install.exe
 
 During installation of AutoHotkey, you will be asked to choose from UNICODE or ANSI. In short, you would probably want to choose UNICODE. It has support for non-English letters and numbers (characters). 
