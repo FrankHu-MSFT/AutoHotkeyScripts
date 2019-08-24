@@ -107,8 +107,10 @@ See the gif below.
 ![](Gifs/Enter_Shift_Alt_Tab.gif)
 
 **Mult - URL Encodes text**
+![](Gifs/Encode_URL.gif)
 
 **Minus/-NumpadSub decodes url**
+![](Gifs/Decode_URL.gif)
 
 **NumLock  - Emergency Exit Button**
 
