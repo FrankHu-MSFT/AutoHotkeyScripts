@@ -8,16 +8,30 @@ This script converts the number keypad into a set of macros.
 I've begun using this and figured to share it out to the team to see if anyone's interested in using it. 
 
 # Installation
+*From the guide*
 
-To install ahk - https://www.autohotkey.com/download/
+Before learning to use AutoHotkey (AHK), you will need to download it. 
 
-A short tutorial on how to use authotkey : https://www.autohotkey.com/docs/Tutorial.htm
+After downloading it, you may possibly need to install it. But that depends on the version you want. For this guide we will use the Installer since it is easiest to set up.
 
-Basically install AutoHotKey the program first, and then you will be able to double click the .ahk files to run them. 
+Download AHK.exe from here : https://autohotkey.com/download/ahk-install.exe
+
+During installation of AutoHotkey, you will be asked to choose from UNICODE or ANSI. In short, you would probably want to choose UNICODE. It has support for non-English letters and numbers (characters). 
+
+Keep going until you see an Install button.
+
+Once you're done, you can double click a AHK Script to run the script. 
 
 ![](Gifs/Run_AHK_Script.gif)
 
 If there are any questions about installing AutoHotKey, and running the scripts please let me know. 
+
+
+*Official Docs*
+
+To install ahk - https://www.autohotkey.com/download/
+
+A short tutorial on how to use authotkey : https://www.autohotkey.com/docs/Tutorial.htm
 
 # Stopping Scripts
 
@@ -31,7 +45,7 @@ All executables you want to run on startup can be found in the folder path :
 
 `C:\Users\<replace-your-username>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
 
-So if you would like for the an autohotkey to run on startup, create a shortcut of an autohotkey and put it in the startup folder. 
+So if you would like for all autohotkey scripts in this git repo to run on startup, create a shortcut of an autohotkey and put it in the startup folder. 
 See the gif below.
 
 ![](Gifs/Run_On_Startup.gif)
