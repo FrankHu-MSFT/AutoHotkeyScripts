@@ -53,13 +53,7 @@ return
 Numpad2::
 gosub label_cxp_and_triage
 Send, product-question
-Sleep, 500
-Send, {TAB}
-Sleep, 150
-Send, {SPACE}
-Sleep, 150
-Send, {SHIFT DOWN}{TAB}{SHIFT UP}
-Sleep, 150
+gosub apply_label
 WinGetPos,,,Xmax,Ymax,A ; get active window size
 Xcenter := Xmax/4        ; Calculate quarter of window, so we move to the quarter left of the screen to click. nothing there on git
 Ycenter := Ymax/2
@@ -85,13 +79,7 @@ return
 Numpad5::
 gosub label_cxp_and_triage
 Send, product-feedback
-Sleep, 500
-Send, {TAB}
-Sleep, 150
-Send, {SPACE}
-Sleep, 150
-Send, {SHIFT DOWN}{TAB}{SHIFT UP}
-Sleep, 150
+gosub apply_label
 WinGetPos,,,Xmax,Ymax,A ; get active window size
 Xcenter := Xmax/4        ; Calculate quarter of window, so we move to the quarter left of the screen to click. nothing there on git
 Ycenter := Ymax/2
@@ -140,13 +128,7 @@ return
 Numpad8::
 gosub label_cxp_and_triage
 Send, doc-enhancement
-Sleep, 500
-Send, {TAB}
-Sleep, 150
-Send, {SPACE}
-Sleep, 150
-Send, {SHIFT DOWN}{TAB}{SHIFT UP}
-Sleep, 150
+gosub apply_label
 WinGetPos,,,Xmax,Ymax,A ; get active window size
 Xcenter := Xmax/4        ; Calculate quarter of window, so we move to the quarter left of the screen to click. nothing there on git
 Ycenter := Ymax/2
@@ -175,13 +157,7 @@ return
 NumpadDiv::
 gosub label_cxp_and_triage
 Send, doc-bug
-Sleep, 500
-Send, {TAB}
-Sleep, 150
-Send, {SPACE}
-Sleep, 150
-Send, {SHIFT DOWN}{TAB}{SHIFT UP}
-Sleep, 150
+gosub apply_label
 WinGetPos,,,Xmax,Ymax,A ; get active window size
 Xcenter := Xmax/4        ; Calculate quarter of window, so we move to the quarter left of the screen to click. nothing there on git
 Ycenter := Ymax/2
@@ -273,29 +249,21 @@ UriEncode(Uri, RE="[0-9A-Za-z]"){
 }
 
 ;************************************* Add CXP and Triaged labels *************************************
+; I would like to figure out if there's a way to find the number of chars in the string and do a for loop to do backspaces or create 
+; a function to do that. 
 label_cxp_and_triage:
 ; check if there's an assignee first. 
 gosub Store_Clipboard ;backup original clipboard
 ; begin labeling
 Send, cxp
-Sleep, 500
-Send, {TAB}
-Sleep, 150	
-Send, {SPACE}
-Sleep, 150
-Send, {SHIFT DOWN}{TAB}{SHIFT UP}
+gosub apply_label
 Send, {BACKSPACE}
 Send, {BACKSPACE}
 Send, {BACKSPACE}
 
 
 Send, triaged
-Sleep, 500
-Send, {TAB}
-Sleep, 150
-Send, {SPACE}
-Sleep, 150
-Send, {SHIFT DOWN}{TAB}{SHIFT UP}
+gosub apply_label
 Send, {BACKSPACE}
 Send, {BACKSPACE}
 Send, {BACKSPACE}
@@ -305,4 +273,16 @@ Send, {BACKSPACE}
 Send, {BACKSPACE}
 
 gosub Restore_Stored_Clipboard ;restore clipboard
+return
+
+;************************************* Apply The Label *************************************
+apply_label:
+Sleep, 500
+Send, {TAB}
+Sleep, 150
+Send, {SPACE}
+Sleep, 150
+Send, {SHIFT DOWN}{TAB}{SHIFT UP}
+Send, {SHIFT DOWN}{TAB}{SHIFT UP}
+Sleep, 150
 return
