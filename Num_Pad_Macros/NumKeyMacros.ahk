@@ -249,28 +249,21 @@ UriEncode(Uri, RE="[0-9A-Za-z]"){
 }
 
 ;************************************* Add CXP and Triaged labels *************************************
-; I would like to figure out if there's a way to find the number of chars in the string and do a for loop to do backspaces or create 
-; a function to do that. 
 label_cxp_and_triage:
 ; check if there's an assignee first. 
 gosub Store_Clipboard ;backup original clipboard
 ; begin labeling
-Send, cxp
+myStringVar = cxp
+Send, %myStringVar%
 gosub apply_label
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-
-
-Send, triaged
+Loop, Parse, myStringVar
+	Send, {BACKSPACE}
+     
+myStringVar = triaged
+Send, %myStringVar%
 gosub apply_label
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
-Send, {BACKSPACE}
+Loop, Parse, myStringVar
+	Send, {BACKSPACE}
 
 gosub Restore_Stored_Clipboard ;restore clipboard
 return
