@@ -275,7 +275,4 @@ Send, {TAB}
 Sleep, 150
 Send, {SPACE}
 Sleep, 150
-Send, {SHIFT DOWN}{TAB}{SHIFT UP}
-Send, {SHIFT DOWN}{TAB}{SHIFT UP}
-Sleep, 150
 return
