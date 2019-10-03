@@ -102,7 +102,7 @@ Send,@
 Sleep, 150
 Send,{CTRL DOWN}v{CTRL UP}
 Sleep, 150
-Send, Please let us know if there are anymore questions within the scope of this git issue. If not, I will be closing out this git issue by end of day today. Please reopen this git issue if you have anymore concerns. Thanks! 
+Send, Please let us know if there are anymore questions within the scope of this git issue. If not, I will be closing out this git issue by end of day today. Please file a new git issue with a reference to this one if you have anymore concerns. Thanks
 return
 
 
@@ -112,7 +112,7 @@ Send,@
 Sleep, 150
 Send,{CTRL DOWN}v{CTRL UP}
 Sleep, 150
-Send, As there hasn't been a response in a while, I will be closing out this git issue now, please reopen this git issue if you have anymore concerns. Thanks
+Send, As there hasn't been a response in a while, I will be closing out this git issue now. Please file a new git issue with a reference to this one if you have anymore concerns. Thanks
 return
 
 ;***********Templated Response for Following up on GitHub******************* 
@@ -137,7 +137,7 @@ return
 
 ;***********Templated Response for Old Proposed/Answered MSDN******************* 
 Numpad9::
-Send, -------------------------------------------------------------------------------- `n Please remember to mark one of the responses as answer if your question has been answered. If not please let us know if there are anymore questions. Thanks!
+Send, `n Please remember to mark one of the responses as answer if your question has been answered. If not please let us know if there are anymore questions. Thanks!
 return
 
 
@@ -149,7 +149,7 @@ return
 
 ;***********Templated Response for Marking an Answer on MSDN******************* 
 !Numpad9::
-Send, I'm following up on this please let us know if there are anymore questions. As it looks like this  issue has been resolved within the scope of the MSDN Thread Question, I will be marking the response as answer. Please let me know if your question has not been answered, and I can go ahead and unmark it as answer or feel free to mark it as unanswer yourself. Thanks!
+Send, I'm following up on this please let us know if there are anymore questions. As it looks like this issue has been resolved within the scope of the MSDN Thread Question, I will be marking the response as answer. Please let me know if your question has not been answered, and I can go ahead and unmark it as answer or feel free to mark it as unanswer yourself. Thanks!
 return
 
 
