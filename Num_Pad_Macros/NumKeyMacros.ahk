@@ -149,7 +149,7 @@ return
 
 ;***********Templated Response for Marking an Answer on MSDN******************* 
 !Numpad9::
-Send, I'm following up on this please let us know if there are anymore questions. As it looks like this issue has been resolved within the scope of the MSDN Thread Question, I will be marking the response as answer. Please let me know if your question has not been answered, and I can go ahead and unmark it as answer or feel free to mark it as unanswer yourself. Thanks!
+Send, I'm following up on this please let us know if there are anymore questions. As it looks like this issue has been resolved within the scope of the MSDN Thread Question, I will be marking the response as answer. Please let me know if your question has not been answered, and I can go ahead and unmark it as answer or feel free to mark it as unanswer yourself. Also please remember to post future questions on the new Q&A Forums here : https://docs.microsoft.com/answers/index.html Thanks!
 return
 
 
