@@ -137,7 +137,7 @@ return
 
 ;***********Templated Response for Old Proposed/Answered MSDN******************* 
 Numpad9::
-Send, `n Please remember to mark one of the responses as answer if your question has been answered. If not please let us know if there are anymore questions. Thanks!
+Send, `nPlease remember to mark one of the responses as answer if your question has been answered. If not please let us know if there are anymore questions. Also please remember to post future questions on the new Q&A Forums here : https://docs.microsoft.com/answers/index.html Thanks!
 return
 
 
