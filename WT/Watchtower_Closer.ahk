@@ -6,7 +6,15 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; From your queue view, press this button to loop and close untill done. Then press numlock to stop the script.
 
 ; with https://wt.microsoft.com/respond/ url pulled up you can close out all your issues in your current bucket. 
-; Only works on standard work monitor
+
+; there are some requirements to get it to work properly :
+; 1. the browser needs to be in focus,
+; 2. the x,y positions need to be correct for the clicks (you can change the x,y positions in the script.
+;        a. Use window spy to get the right x y positions : https://autohotkey.com/board/topic/63365-using-window-spy/)
+;            So the click x,y needs to be changed to click on the items per your screen dimension. See 
+; 
+
+
 
 ^SPACE::
   Loop 38 ; Loop 38 times. 
