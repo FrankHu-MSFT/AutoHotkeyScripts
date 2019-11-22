@@ -25,6 +25,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
 
+; TODO: Change the 5 clicks below to the correct x,y positions per your screen dimensions. 
 ^SPACE::
   Loop 38 ; Loop 38 times. 
 	{
