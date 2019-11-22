@@ -47,4 +47,4 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
   return
   
   
-  ^1::ExitApp ; press numlock to stop and exit the script. 
+  ^1::ExitApp ; press ctrl + 1 to stop and exit the script. 
