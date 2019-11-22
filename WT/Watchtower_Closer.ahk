@@ -3,10 +3,12 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-; From your queue view, press this button to loop and close untill done. 
-; Then press Ctrl + 1 to stop the script.
+; --------------------------------------------------------------------------------------------------------------
+
 
 ; with https://wt.microsoft.com/respond/ url pulled up you can close out all your issues in your current bucket. 
+; Then press Ctrl + Space to start the script.
+; Then press Ctrl + 1 to stop the script.
 
 
 
@@ -18,6 +20,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;            https://github.com/FrankHu-MSFT/AutoHotkeyScripts/blob/master/Gifs/AutoHotKeyWTClosure.gif
 ;            for a small gif on how it is supposed to auto click.
 ; 
+
+
 
 
 
