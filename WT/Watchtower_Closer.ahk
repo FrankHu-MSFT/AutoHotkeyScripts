@@ -27,7 +27,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; TODO: Change the 5 clicks below to the correct x,y positions per your screen dimensions. 
 ^SPACE::
-  Loop 38 ; Loop 38 times. 
+  Loop 38 ; Loop 38 times here, it's a multiple of 10. So if you want it to be 500 times, you would change it to 50. 
 	{
 		Click 372, 155 ; clicks on queue bar
 		sleep 5000
