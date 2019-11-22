@@ -3,10 +3,12 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-; From your queue view, press this button to loop and close untill done. 
-; Then press Ctrl + 1 to stop the script.
+; --------------------------------------------------------------------------------------------------------------
+
 
 ; with https://wt.microsoft.com/respond/ url pulled up you can close out all your issues in your current bucket. 
+; Then press Ctrl + Space to start the script.
+; Then press Ctrl + 1 to stop the script.
 
 
 
@@ -21,8 +23,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
 
+
+
+; TODO: Change the 5 clicks below to the correct x,y positions per your screen dimensions. 
 ^SPACE::
-  Loop 38 ; Loop 38 times. 
+  Loop 38 ; Loop 38 times here, it's a multiple of 10. So if you want it to be 500 times, you would change it to 50. 
 	{
 		Click 372, 155 ; clicks on queue bar
 		sleep 5000
@@ -42,4 +47,4 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
   return
   
   
-  ^1::ExitApp ; press numlock to stop and exit the script. 
+  ^1::ExitApp ; press ctrl + 1 to stop and exit the script. 
