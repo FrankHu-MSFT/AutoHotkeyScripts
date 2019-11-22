@@ -11,9 +11,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ^SPACE::
   Loop 38 ; Loop 38 times. 
 	{
-		Click 372, 155 ; clicks on browse bucket 
+		Click 372, 155 ; clicks on queue bar
 		sleep 5000
-		Click 319, 318 ; clicks on queue
+		Click 319, 318 ; clicks on queue from the drop down menu
 		sleep 5000
 		Loop 10{ ; run every 10 times, then refresh due to inconsistencies with WT
 		 Click 364, 225 ; clicks on top item in bucket  
