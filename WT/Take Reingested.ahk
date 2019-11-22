@@ -28,7 +28,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 		 sleep 2000
 		 Click 1299, 1023 ; press submit button
 		 sleep 2000
-		 Click 359, 287 ; take ownership
+		 Click 362, 287 ; take ownership
 		 sleep 2000
 		}
 	  Send {Ctrl Down}r{Ctrl Up}
