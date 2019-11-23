@@ -3,6 +3,8 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+; This is just to clear out the entire bucket from MSDN for S&I. It's always a product question,
+
 ; From your queue view, press this button to loop and close untill done. Then press numlock to stop the script. 
 ^SPACE::
   Loop 38

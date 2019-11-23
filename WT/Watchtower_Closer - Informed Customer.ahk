@@ -22,7 +22,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; 
 
 
-
+; Informed customer is for proposed answers and verified answers on MSDN, filter with proposed and verified answer.
 
 
 ; TODO: Change the 5 clicks below to the correct x,y positions per your screen dimensions. 
@@ -30,16 +30,16 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
   Loop 38 ; Loop 38 times here, it's a multiple of 10. So if you want it to be 500 times, you would change it to 50. 
 	{
 		Click 372, 155 ; clicks on queue bar
-		sleep 5000
+		sleep 2000
 		Click 319, 318 ; clicks on queue from the drop down menu
-		sleep 5000
+		sleep 3000
 		Loop 10{ ; run every 10 times, then refresh due to inconsistencies with WT
 		 Click 364, 225 ; clicks on top item in bucket  
-		 sleep 3000
-		 Click 364, 280 ; clicks on close item
-		 sleep 3000
-		 Click 278,342 ; clicks fixed issue
-		 sleep 3000
+		 sleep 2000
+		 Click 374, 282 ; clicks close issue button
+		 sleep 2000
+		 Click 192, 515 ; clicks fixed issue
+		 sleep 2000
 		}
 	  Send {Ctrl Down}r{Ctrl Up} ; refresh the page to reset watchtower for resiliency purposes. 
 	  sleep 10000

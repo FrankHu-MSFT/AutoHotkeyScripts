@@ -3,6 +3,9 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+; This is to clear out the bucket of reingested items. 
+; Filter with the tag triaged. if the item has already been triaged then the item is reingested. 
+
 ; From your queue view, press this button to loop and close untill done. Then press numlock to stop the script. 
 ^SPACE::
   Loop 38
